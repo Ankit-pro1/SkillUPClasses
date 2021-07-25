@@ -19,7 +19,7 @@
                             <p>Ab hogi baat gyaan ki<span>...</span></p>
                             <h4>Providing A Best Quality Coaching Classes</h4>
                             <div class="header-btn">
-                                <a href="about-us.php" class="d-btn p-btn">Know more</a>
+                                <a href="about-us.php" class="d-btn p-btn">Know More</a>
                                 <a href="tel:+918826134197" class="d-btn s-btn">Call Now</a>
                             </div>
                         </div>
