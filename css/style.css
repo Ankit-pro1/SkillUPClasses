@@ -1,0 +1,732 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/******************** Modal Box ************************/
+.modal-content{
+    border-radius: 0;
+}
+.modal-header, .modal-body{
+    padding: 16px;
+    text-align: center;
+}
+.modal-header button:focus{
+    outline: none;
+}
+.modal-body input,.modal-body textarea{
+    /* border: 1px solid var(--black); */
+    border-radius: 4px;
+    padding: 20px 18px;
+    font-size: 17px;
+}
+.modal-body  textarea{
+    resize: none;
+}
+.modal-body input:focus,.modal-body textarea:focus{
+    opacity: 1;
+    border: 1px solid var(--black);
+    box-shadow: none;
+}
+/******************** Modal Box End ************************/
+
+/******************* Social Links ***********************/
+.social-links{
+    position: fixed;
+    right: 0;
+    top: 26%;
+    z-index: 999;
+}
+.social-links .social-link{
+    color: var(--white);
+    padding: 6px 8px;
+    background-color: var(--violet);
+    transition: all 0.5s ease;
+}
+.social-link:hover{
+   transform: rotate(0deg);
+}
+.social-links .social-link a{
+    color: var(--white);
+    font-size: 20px;
+}
+/******************* Social Links End ***********************/
+
+/******************* Free Tagline ************************/
+.header .container-fluid{
+    padding: 0;
+}
+.free-tagline{
+    display: block;
+    text-align: center;
+    color: var(--white);
+}
+.free-tagline p{
+    padding: 40px 0 20px 0;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.free-tagline p a{
+    color: white;
+    animation-name: free-tagline-call;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes free-tagline-call{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+/******************* Free tagline End ************************/
+/******************* Utility Classes **********************/
+a{
+    text-decoration: none;
+}
+.header-padding{
+    padding: 0 0 5rem 0;
+}
+.padding{
+    padding: 2rem 0;
+}
+.d-btn,
+.d-btn:active,
+.d-btn:focus{
+    display: inline-block;
+    padding: 6px 14px;
+    font-size: 20px;
+    border-radius: 4px;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all ease 0.6s;
+}
+.p-btn{
+    text-decoration: none;
+    background-color: var(--violet);
+    color: var(--white);
+    margin-right: 10px;
+}
+.p-btn:hover{
+    text-decoration: none;
+    background-color: transparent;
+    border: 2px solid var(--violet);
+    color: var(--violet);
+}
+.s-btn{
+    background-color: var(--white);
+    color: var(--black);
+}
+.s-btn:hover{
+   background-color: transparent;
+   border: 2px solid var(--white);
+   color: var(--white);
+}
+.heading{
+    position: relative;
+    font-size: 44px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.heading::after{
+    position: absolute;
+    content: '';
+    width: 210px;
+    height: 3px;
+    background-color: var(--black);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.heading::before{
+    position: absolute;
+    content: '';
+    background-color: var(--white);
+    color: var(--dviolet);
+    font-size: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -17px;
+    padding: 0 8px;
+    z-index: 1;
+}
+/******************* Utility Classes End **********************/
+/*********************** Variables **************************/
+:root{
+    --violet: #813590;
+    --dviolet:rgb(110, 12, 110);
+    --black: #000;
+    --white: #fff;
+    --gray: #f0f0f0;
+}
+/************************ Navigation Bar ********************/
+.navigation-bar{
+    background-color: var(--violet);
+}
+.navbar{
+    padding: 0;
+}
+.navbar-brand img{
+    width: 300px;
+}
+.nav-link{
+    color: var(--white);
+    font-size: 20px;
+    margin: 0 6px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.6s;
+}
+.nav-item:hover .nav-link{
+    color: var(--white);
+    border-bottom: 2px solid var(--white);
+}
+.nav-item:hover .nav-link::after{
+    opacity: 1;
+}
+.navbar-toggler,
+.navbar-toggler:active,
+.navbar-toggler:focus{
+    outline: none;
+}
+.navbar-toggler i{
+    color: var(--white);
+    font-size: 26px;
+}
+/************************ Navigation Bar End **********************/
+
+/************************* Header Section **********************/
+.header{
+    /* background-attachment: fixed; */
+    background-image: url('../images/skillupHeader.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.header-overlay{
+    background-color: rgba(0, 0, 0, 0.6);
+    color:#fff;
+}
+.header-text h1{
+    font-size: 48px;
+    margin-bottom: 0;
+    line-height: 44px;
+}
+.header-text h1 span{
+    color: rgb(155, 37, 179);
+}
+.header-text h1 span span{
+    font-size: 56px;
+}
+.header-text p{
+    letter-spacing: 1.2px;
+    margin-bottom: 28px;
+}
+.header-text p span{
+    font-size: 24px;
+    animation-name: header-dots;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+@keyframes header-dots{
+    0%{
+        opacity: 1;
+    }
+    100%{
+       opacity: 0;
+    }
+}
+.header-text h4{
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+.header-btn{
+    margin-top: 40px;
+}
+/************************* Header Section End **********************/
+
+/************************* About Us Section ************************/
+.about-us .heading::before{
+    content: 'who we are';
+}
+.about-img img{
+    width: 380px;
+    object-fit: contain;
+    z-index: -1;
+}
+.about-img{
+    position: relative;
+}
+.img-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-61%);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+.img-content h3{
+    color: var(--white);
+    margin-bottom: 0;
+}
+.img-content h5{
+    color: var(--white);
+    margin-bottom: 28px;
+    font-weight: 400;
+}
+.about-socials a{
+    font-size: 20px;
+    margin: 6px 2px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    color: var(--violet);
+    background-color: var(--white);
+    transition: all 0.5s ease;
+}
+.about-socials a:hover{
+    background-color: var(--violet);
+    color: var(--white);
+}
+.about-img:hover .img-content{
+    opacity: 1;
+}
+.about-content h3{
+    margin-bottom: 20px;
+}
+.about-content p{
+    font-size: 16px;
+    margin-bottom: 40px;
+    line-height: 26px;
+    text-align: justify;
+}
+/************************* About Us Section End ************************/
+
+/************************* Features Section ***************************/
+.features{
+    background-color:var(--gray);
+}
+.features .heading::before{
+    content: "what we provide";
+    background-color: var(--gray);
+}
+.features .card{
+    background-color: var(--white);
+    border-radius: 4px;
+    padding: 6px;
+    margin-bottom: 20px;
+    box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 0.5s ease;
+}
+.feature-box:hover .card{
+    transform: translateY(-6px);
+}
+.feature-box .icon {
+    text-align: center;
+    margin-top: 2px;
+}
+.feature-box .icon i{
+    font-size: 40px;
+    color: var(--dviolet);
+}
+.feature-btn{
+    margin-top: 20px;
+}
+/************************* Features Section End ***************************/
+
+/************************* Why Choose Us Section *************************/
+.why-choose-us .heading::before{
+    content: "what makes us unique";
+}
+.why-choose-us .heading::after{
+   width: 250px;
+}
+.choose-box{
+    padding: 14px 20px 10px 20px;
+    background-color: var(--violet);
+    height: 300px;
+    color: var(--white);
+    border-radius: 10px;
+    transition: all 0.5s ease-in;
+}
+.choose-box hr{
+    background-color: var(--white);
+    margin-top:8px;
+    margin-bottom: 4px;
+}
+.choose-box:hover{
+    background-color: var(--dviolet) ;
+}
+.owl-dots{
+    margin-top: 20px;
+    text-align: center;
+}
+.owl-dot{
+    height: 13px;
+    width: 13px;
+    outline: none!important;
+    border-radius: 50%;
+    border: 2px solid var(--violet)!important;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+.owl-dot.active{
+    border-radius: 10px;
+}
+.owl-dot.active, .owl-dot:hover{
+    background: var(--violet)!important;
+}
+.owl-dot span{
+    opacity: 0;
+}
+
+.choose-us-page .row .col-md-6{
+    margin-bottom: 20px;
+}
+/************************* Why Choose Us Section End *************************/
+
+/************************* Classes Section *********************************/
+.classes{
+    background-color: var(--gray);
+}
+.classes .heading::before{
+    content: "classes available for";
+    background-color: var(--gray);
+}
+.classes .card{
+    margin-bottom:20px;
+    padding: 10px;
+    transition: all 0.5s ease-in;
+}
+.classes .card .col-3{
+    text-align: center;
+}
+.classes .card .col-3 i{
+    font-size: 40px;
+    margin-top: 25px;
+    color: var(--violet);
+     transition: all 0.5s ease-in;
+}
+.classes .card:hover{
+    background-color: var(--violet);
+    color: var(--white);
+    transform: scale(1.1);
+}
+.classes .card:hover i{
+    color: var(--white);
+}
+/************************* Classes Section End *********************************/
+
+/************************* Students Section *********************************/
+/* .students{
+    background-attachment: fixed;
+    background-image: url('../images/skillupHeader.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.students-overlay{
+    background-color: rgba(0, 0, 0, 0.7);
+    color: var(--white);
+} */
+.students .heading::before{
+    content: "what they say";
+}
+.student-box .card-body-content{
+    text-align: justify;
+    font-style: italic;
+}
+.student-box {
+    transition: all 0.5s ease-in;
+}
+.student-box:hover{
+    background-color: var(--violet);
+    color: var(--white);
+    border-radius: 10px;
+}
+.students .student-box{
+    padding-top: 10px;
+}
+.students .col-md-6{
+    margin-bottom: 20px;
+}
+.students .student-box img{
+    display: block;
+    margin: auto;
+    width: 200px;
+    border-radius: 50%;
+    border: 4px solid var(--dviolet);
+}
+.student-box:hover img{
+    border: 4px solid white;
+}
+.students .student-box .card-body h3{
+    margin-bottom: 0px;
+}
+.students .student-box .card-body P{
+    margin-bottom: 4px;
+}
+/************************* Students Section End *********************************/
+
+/****************************** FAQ Section *****************************/
+.faq{
+    background-color: var(--gray);
+}
+.faq .heading::after{
+    width: 275px;
+}
+.faq .heading::before{
+    content: "frequently asked questions";
+    background-color: var(--gray);
+}
+.faq #accordion .card {
+    margin-bottom: 10px;
+    background-color: var(--violet);
+    border: 2px solid var(--violet);
+}
+.faq #accordion .card a{
+    color: var(--white);
+    font-size: 18px;
+}
+.faq #accordion .card a:hover,
+.faq #accordion .card a:active{
+    text-decoration: underline;
+}
+.faq #accordion .card .card-body{
+    background-color: var(--white);
+}
+.faq #accordion .card .card-body a{
+    color: var(--black);
+    font-size: 16px;
+}
+.faq #accordion .card .card-body p{
+    margin-bottom: 6px;
+}
+.faq #accordion .card .card-body p:first-child{
+    margin-top: 12px;
+    border: none;
+}
+/****************************** FAQ Section ENd *****************************/
+
+/****************************** Contact Section ****************************/
+.contact .heading::before{
+    content: "get in touch";
+}
+.contact .contact-address-box{
+    margin-bottom: 12px;
+}
+.contact .contact-address-box i{
+    margin-right: 10px;
+    font-size: 18px;
+    background-color: var(--dviolet);
+    padding: 12px;
+    color: white;
+    border-radius: 50%;
+}
+.contact .contact-address-box .box{
+    margin-left: 54px;
+    margin-top: -20px;
+}
+.contact .contact-form input,.contact .contact-form textarea{
+    border-radius: 4px;
+    padding: 20px 18px;
+    font-size: 17px;
+}
+.contact .contact-form textarea{
+    resize: none;
+}
+.contact .contact-form input:focus,.contact .contact-form textarea:focus{
+    border: 1px solid var(--black);
+    box-shadow: none;
+}
+/****************************** Contact Section End  ****************************/
+
+/****************************** Footer Section *********************************/
+footer{
+    background-color: var(--dviolet);
+    color: var(--white);
+    text-align: center;
+    padding: 10px 0;
+}
+footer a,
+footer a:hover{
+    color: var(--white);
+}
+/***************XX*************** Footer Section **************XX*******************/
+@media screen and  (max-width:992px){
+    .about-img img{
+        display: block;
+        margin: auto;
+        width: 400px;
+        object-fit: contain;
+        margin-bottom: 10px;
+    }
+}
+/************* Media Query for 768px ***************/
+@media screen and  (max-width:768px){
+    /* Navigation Section */
+    .navbar-nav{
+        text-align: center;
+        background-color: rgb(110, 12, 110);
+       padding: 16px;
+    }
+    .nav-link{
+        display: inline-block;
+        padding: 2px;
+    }
+    .about-img img{
+        display: block;
+        margin: auto;
+        width: 100%;
+        object-fit: contain;
+    }
+}
+/************* Media Query for 576px ***************/
+@media screen and (max-width: 576px){
+    .faq-page{
+        height: 100%;
+    }
+    /* free tagline */
+    .free-tagline p{
+        padding: 20px 0 20px 0;
+    }
+    /* Modal */
+    .modal-content{
+        max-width: 290px;
+        margin: auto;
+    }
+.modal-content .modal-title{
+    font-size: 20px
+}
+    /* Free Tagline  */
+    .free-tagline p{
+        font-size: 16px;
+        margin: 0 20px;
+    }
+    /* Center Heading */
+    .heading{
+        font-size: 36px;
+    }
+    .heading::before{
+        font-size: 16px;
+    }
+    /* Navigation Section */
+    .nav-link{
+        font-size: 18px;
+    }
+    .navbar-brand img{
+        width: 240px;
+    }
+    .navbar-toggler i{
+        font-size: 22px;
+        padding: 0;
+    }
+    /* Header Section */
+    .header-padding{
+        padding: 0 0 3rem 0;
+    }
+    .header-text h1{
+        font-size: 32px;
+        line-height: 34px;
+    }
+    .header-text h1 span span{
+        font-size: 38px;
+    }
+    .header-text h4{
+        font-size: 24px;
+    }
+    .d-btn,
+    .d-btn:active,
+    .d-btn:focus{
+    padding: 4px 8px;
+    font-size: 18px;
+    }
+    /* About us Section */
+    .about-img img{
+        display: block;
+        margin: auto;
+        width: 100%;
+        object-fit: contain;
+    }
+    .img-content{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .img-content h5{
+        font-size: 18px;
+    }
+    .about-content .d-btn{
+        margin-left: 50%;
+        transform: translateX(-50%);
+      }
+      .about-content{
+          margin-top: 16px;
+      }
+      .about-content h3{
+        margin-bottom: 6px;
+    }
+    .about-content p{
+        margin-bottom: 10px;
+    }
+    /* Features Section */
+    .feature-box{
+        /* margin: 0px 10px; */
+        margin: 0px 10px -10px 10px;
+    }
+    .feature-box .icon i{
+        font-size: 32px;
+        color: var(--dviolet);
+        margin-left: -14px;
+    }
+    /* Why choose us */
+    .choose-box{
+        margin: 0 14px;
+        height: 340px;
+    }
+    .choose-box h3{
+        font-size: 24px;
+    }
+    /* Classes */
+    .classes .card{
+        margin-bottom:10px;
+        padding:20px 17px;
+    }
+    .classes .card .h3{
+        font-size: 16px;
+    }
+    .classes .card .col-3 i{
+        font-size: 36px;
+    }
+    .classes .container > .row{
+        margin: 0 40px;
+    }
+    /* Students */
+    .students .item{
+        margin: 0 14px;
+    }
+    /* FAQ*/
+    .faq .heading::before{
+       margin-bottom: -18px;
+    }
+    .faq .row{
+        margin: 0 6px;
+    }
+    /* Contact */
+    .contact .row{
+        margin: 0 6px;
+    }
+    .contact .contact-address{
+        margin-top: 20px;
+    }
+}
