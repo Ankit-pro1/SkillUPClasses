@@ -1,0 +1,4 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/skilliyf/public_html/
+    - /bin/cp * $DEPLOYPATH
