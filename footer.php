@@ -1,7 +1,7 @@
 
     <!-------------------------------------- Footer Section ------------------------------->
     <footer class="container-fluid">
-        <span>Copyright &copy; All Rights Reserved SkillUP Classes 2021. Designed and maintained by <a href="https://ankit-pro1.github.io/PortfolioWebsite/" target="_blank">Ankit Kumar</a> </span>
+        <span>Copyright &copy; All Rights Reserved SkillUP Classes 2021. Designed and maintained by <a href="https://ankitcode.netlify.app/" target="_blank">Ankit Kumar</a> </span>
     </footer>
     <!-------------------XX------------------- Footer Section -------------XX------------------>
     <!-- Jquery.js-->
