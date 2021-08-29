@@ -1,6 +1,7 @@
 <?php
 $con = mysqli_connect('localhost', 'skilliyf_skilliyf', 'skillupdata@123', 'skilliyf_skillupdata', '3306');
 // $con = mysqli_connect('localhost:3307', 'root', '', 'skillupdata');
+mail("ankitkumar151615@gmail.com", "Just Testing", "Message is passed by Ankit Kumar");
 if (!$con) {
 ?>
     <script type="text/javascript">
